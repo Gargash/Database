@@ -151,3 +151,9 @@ ALTER TABLE `account` AUTO_INCREMENT=1;
 -- Auto increment value for `realmlist`
 -- ----------------------------
 ALTER TABLE `realmlist` AUTO_INCREMENT=2;
+
+-- ----------------------------
+-- Misc Records
+-- ----------------------------
+INSERT INTO `realmd_db_version` VALUES (NULL);
+INSERT INTO `realmlist` VALUES (1, 'MoP 5.0.4 Beta', '127.0.0.1', 8085, 1, 0, 1, 0, 0, '15882');
