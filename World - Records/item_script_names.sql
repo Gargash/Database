@@ -1,0 +1,12 @@
+INSERT INTO `item_script_names` VALUES (24538, 'item_only_for_flight');
+INSERT INTO `item_script_names` VALUES (34475, 'item_only_for_flight');
+INSERT INTO `item_script_names` VALUES (34489, 'item_only_for_flight');
+INSERT INTO `item_script_names` VALUES (31742, 'item_nether_wraith_beacon');
+INSERT INTO `item_script_names` VALUES (39878, 'item_mysterious_egg');
+INSERT INTO `item_script_names` VALUES (44717, 'item_disgusting_jar');
+INSERT INTO `item_script_names` VALUES (35127, 'item_pile_fake_furs');
+INSERT INTO `item_script_names` VALUES (33098, 'item_petrov_cluster_bombs');
+INSERT INTO `item_script_names` VALUES (35228, 'item_dehta_trap_smasher');
+INSERT INTO `item_script_names` VALUES (5397, 'item_defias_gunpowder');
+INSERT INTO `item_script_names` VALUES (31088, 'item_tainted_core');
+INSERT INTO `item_script_names` VALUES (56473, 'item_kromgar_flame_thrower');

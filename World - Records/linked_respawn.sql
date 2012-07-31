@@ -1,0 +1,10 @@
+INSERT INTO `linked_respawn` VALUES (126743, 126792, 0);
+INSERT INTO `linked_respawn` VALUES (126708, 126792, 0);
+INSERT INTO `linked_respawn` VALUES (126702, 126792, 0);
+INSERT INTO `linked_respawn` VALUES (126691, 126792, 0);
+INSERT INTO `linked_respawn` VALUES (126710, 126792, 0);
+INSERT INTO `linked_respawn` VALUES (126968, 126982, 0);
+INSERT INTO `linked_respawn` VALUES (126969, 126982, 0);
+INSERT INTO `linked_respawn` VALUES (126977, 126982, 0);
+INSERT INTO `linked_respawn` VALUES (126971, 126982, 0);
+INSERT INTO `linked_respawn` VALUES (126978, 126982, 0);
