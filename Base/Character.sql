@@ -1329,36 +1329,36 @@ COMMENT='Battle Pet System'
 -- Records for `battle_pet_spell`
 -- ----------------------------
 
-INSERT INTO `bpet_ability` VALUES (0, 32703, 10); -- regen
-INSERT INTO `bpet_ability` VALUES (1, 32703, 10); -- regen
-INSERT INTO `bpet_ability` VALUES (2, 32703, 10); -- regen
-INSERT INTO `bpet_ability` VALUES (3, 7160, 10); -- execute
-INSERT INTO `bpet_ability` VALUES (4, 7160, 10); -- execute
-INSERT INTO `bpet_ability` VALUES (5, 7160, 10); -- execute
-INSERT INTO `bpet_ability` VALUES (6, 118442, 10); -- swiftness
-INSERT INTO `bpet_ability` VALUES (7, 118442, 10); -- swiftness
-INSERT INTO `bpet_ability` VALUES (8, 118442, 10); -- swiftness
-INSERT INTO `bpet_ability` VALUES (9, 41410, 10); -- damned
-INSERT INTO `bpet_ability` VALUES (10, 41410, 10); -- damned
-INSERT INTO `bpet_ability` VALUES (11, 41410, 10); -- damned
-INSERT INTO `bpet_ability` VALUES (12, 115997, 10); -- elusiveness
-INSERT INTO `bpet_ability` VALUES (13, 115997, 10); -- elusiveness
-INSERT INTO `bpet_ability` VALUES (14, 115997, 10); -- elusiveness
-INSERT INTO `bpet_ability` VALUES (15, 33054, 10); -- spellshield
-INSERT INTO `bpet_ability` VALUES (16, 33054, 10); -- spellshield
-INSERT INTO `bpet_ability` VALUES (17, 33054, 10); -- spellshield
-INSERT INTO `bpet_ability` VALUES (18, 2380, 10); -- wheather resistance
-INSERT INTO `bpet_ability` VALUES (19, 2380, 10); -- wheather resistance
-INSERT INTO `bpet_ability` VALUES (20, 2380, 10); -- wheather resistance
-INSERT INTO `bpet_ability` VALUES (21, 60075, 10); -- enrage
-INSERT INTO `bpet_ability` VALUES (22, 60075, 10); -- enrage
-INSERT INTO `bpet_ability` VALUES (23, 60075, 10); -- enrage
-INSERT INTO `bpet_ability` VALUES (24, 8361, 10); -- purity
-INSERT INTO `bpet_ability` VALUES (25, 8361, 10); -- purity
-INSERT INTO `bpet_ability` VALUES (26, 8361, 10); -- purity
-INSERT INTO `bpet_ability` VALUES (27, 64668, 10); -- failsafe
-INSERT INTO `bpet_ability` VALUES (28, 64668, 10); -- failsafe
-INSERT INTO `bpet_ability` VALUES (29, 64668, 10); -- failsafe
+INSERT INTO `battle_pet_spell` VALUES (0, 32703, 10); -- regen
+INSERT INTO `battle_pet_spell` VALUES (1, 32703, 10); -- regen
+INSERT INTO `battle_pet_spell` VALUES (2, 32703, 10); -- regen
+INSERT INTO `battle_pet_spell` VALUES (3, 7160, 10); -- execute
+INSERT INTO `battle_pet_spell` VALUES (4, 7160, 10); -- execute
+INSERT INTO `battle_pet_spell` VALUES (5, 7160, 10); -- execute
+INSERT INTO `battle_pet_spell` VALUES (6, 118442, 10); -- swiftness
+INSERT INTO `battle_pet_spell` VALUES (7, 118442, 10); -- swiftness
+INSERT INTO `battle_pet_spell` VALUES (8, 118442, 10); -- swiftness
+INSERT INTO `battle_pet_spell` VALUES (9, 41410, 10); -- damned
+INSERT INTO `battle_pet_spell` VALUES (10, 41410, 10); -- damned
+INSERT INTO `battle_pet_spell` VALUES (11, 41410, 10); -- damned
+INSERT INTO `battle_pet_spell` VALUES (12, 115997, 10); -- elusiveness
+INSERT INTO `battle_pet_spell` VALUES (13, 115997, 10); -- elusiveness
+INSERT INTO `battle_pet_spell` VALUES (14, 115997, 10); -- elusiveness
+INSERT INTO `battle_pet_spell` VALUES (15, 33054, 10); -- spellshield
+INSERT INTO `battle_pet_spell` VALUES (16, 33054, 10); -- spellshield
+INSERT INTO `battle_pet_spell` VALUES (17, 33054, 10); -- spellshield
+INSERT INTO `battle_pet_spell` VALUES (18, 2380, 10); -- wheather resistance
+INSERT INTO `battle_pet_spell` VALUES (19, 2380, 10); -- wheather resistance
+INSERT INTO `battle_pet_spell` VALUES (20, 2380, 10); -- wheather resistance
+INSERT INTO `battle_pet_spell` VALUES (21, 60075, 10); -- enrage
+INSERT INTO `battle_pet_spell` VALUES (22, 60075, 10); -- enrage
+INSERT INTO `battle_pet_spell` VALUES (23, 60075, 10); -- enrage
+INSERT INTO `battle_pet_spell` VALUES (24, 8361, 10); -- purity
+INSERT INTO `battle_pet_spell` VALUES (25, 8361, 10); -- purity
+INSERT INTO `battle_pet_spell` VALUES (26, 8361, 10); -- purity
+INSERT INTO `battle_pet_spell` VALUES (27, 64668, 10); -- failsafe
+INSERT INTO `battle_pet_spell` VALUES (28, 64668, 10); -- failsafe
+INSERT INTO `battle_pet_spell` VALUES (29, 64668, 10); -- failsafe
 
 -- ----------------------------
 -- Table structure for `battle_pet_spell_cooldown`
