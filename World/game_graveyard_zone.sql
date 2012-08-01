@@ -1210,3 +1210,4 @@ INSERT INTO `game_graveyard_zone` VALUES (1782, 5339, 0);
 INSERT INTO `game_graveyard_zone` VALUES (1459, 5339, 0);
 INSERT INTO `game_graveyard_zone` VALUES (1458, 5339, 0);
 INSERT INTO `game_graveyard_zone` VALUES (1460, 5339, 0);
+-- mop

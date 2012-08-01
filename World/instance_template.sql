@@ -93,3 +93,34 @@ INSERT INTO `instance_template` VALUES (671, 0, NULL, NULL, NULL, NULL, 'instanc
 INSERT INTO `instance_template` VALUES (754, 0, NULL, NULL, NULL, NULL, '', 0);
 INSERT INTO `instance_template` VALUES (755, 0, NULL, NULL, NULL, NULL, 'instance_lost_city_of_the_tolvir', 0);
 INSERT INTO `instance_template` VALUES (725, 0, NULL, NULL, NULL, NULL, 'instance_the_stonecore', 0);
+-- mop
+-- instance
+INSERT INTO `instance_template` VALUES (959, 0, NULL, NULL, NULL, NULL, 'instance_shadopan', 0);
+INSERT INTO `instance_template` VALUES (960, 0, NULL, NULL, NULL, NULL, 'instance_temple_of_jade', 0);
+INSERT INTO `instance_template` VALUES (961, 0, NULL, NULL, NULL, NULL, 'instance_stormstout_brewery', 0);
+INSERT INTO `instance_template` VALUES (962, 0, NULL, NULL, NULL, NULL, 'instance_gate_of_setting_sun', 0);
+INSERT INTO `instance_template` VALUES (994, 0, NULL, NULL, NULL, NULL, 'instance_mogushan_palace', 0);
+INSERT INTO `instance_template` VALUES (995, 0, NULL, NULL, NULL, NULL, 'instance_the_depths', 0);
+INSERT INTO `instance_template` VALUES (996, 0, NULL, NULL, NULL, NULL, 'instance_terrace_of_endless_spring', 0);
+INSERT INTO `instance_template` VALUES (1001, 0, NULL, NULL, NULL, NULL, 'instance_scarlet_halls', 0);
+INSERT INTO `instance_template` VALUES (1004, 0, NULL, NULL, NULL, NULL, 'instance_scarlet_monastery', 0);
+INSERT INTO `instance_template` VALUES (1007, 0, NULL, NULL, NULL, NULL, 'instance_scholomance', 0);
+INSERT INTO `instance_template` VALUES (1008, 0, NULL, NULL, NULL, NULL, 'instance_mogushan_vaults', 0);
+INSERT INTO `instance_template` VALUES (1009, 0, NULL, NULL, NULL, NULL, 'instance_heart_of_fear', 0);
+INSERT INTO `instance_template` VALUES (1011, 0, NULL, NULL, NULL, NULL, 'instance_siege_of_niuzao_temple', 0);
+
+--scenario
+INSERT INTO `instance_template` VALUES (999, 0, NULL, NULL, NULL, NULL, 'instance_battle_for_theramore_a', 0);
+INSERT INTO `instance_template` VALUES (1000, 0, NULL, NULL, NULL, NULL, 'instance_battle_for_theramore_h', 0);
+INSERT INTO `instance_template` VALUES (1005, 0, NULL, NULL, NULL, NULL, 'instance_brewmaster_01', 0);
+INSERT INTO `instance_template` VALUES (1014, 0, NULL, NULL, NULL, NULL, 'instance_monk_area', 0);
+INSERT INTO `instance_template` VALUES (1024, 0, NULL, NULL, NULL, NULL, 'instance_panda_fishing_village', 0);
+INSERT INTO `instance_template` VALUES (1028, 0, NULL, NULL, NULL, NULL, 'instance_mogu_ruins', 0);
+INSERT INTO `instance_template` VALUES (1029, 0, NULL, NULL, NULL, NULL, 'instance_mogu crypt', 0);
+INSERT INTO `instance_template` VALUES (1030, 0, NULL, NULL, NULL, NULL, 'instance_mogu_crypt_destroyed', 0);
+INSERT INTO `instance_template` VALUES (1031, 0, NULL, NULL, NULL, NULL, 'instance_proving_grounds', 0);
+INSERT INTO `instance_template` VALUES (1032, 0, NULL, NULL, NULL, NULL, 'instance_pet_battle_jade_forrest', 0);
+INSERT INTO `instance_template` VALUES (1035, 0, NULL, NULL, NULL, NULL, 'instance_valley_of_power', 0);
+INSERT INTO `instance_template` VALUES (1048, 0, NULL, NULL, NULL, NULL, 'instance_brewmaster_03', 0);
+INSERT INTO `instance_template` VALUES (1049, 0, NULL, NULL, NULL, NULL, 'instance_black_ox_temple', 0);
+INSERT INTO `instance_template` VALUES (1050, 0, NULL, NULL, NULL, NULL, 'instance_klaxxi_island', 0);

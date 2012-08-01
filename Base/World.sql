@@ -2505,6 +2505,72 @@ COMMENT='Item System'
 ;
 
 -- ----------------------------
+-- Table structure for `battle_pet_levelstats`
+-- ----------------------------
+DROP TABLE IF EXISTS `battle_pet_levelstats`;
+CREATE TABLE `battle_pet_levelstats` (
+  `pet_entry` int(11) unsigned NOT NULL DEFAULT '0',
+  `speciesID` int(11) unsigned NOT NULL DEFAULT '0',
+  `creature_entry` int(11) unsigned DEFAULT '0',
+  `name` varchar(100) DEFAULT 'BPet',
+  `Ability0` int(11) unsigned NOT NULL DEFAULT '0', -- passive ability
+  `Ability1a` int(11) unsigned NOT NULL DEFAULT '0', --option spell 1
+  `Ability1b` int(11) unsigned NOT NULL DEFAULT '0', --option spell 1
+  `Ability2a` int(11) unsigned NOT NULL DEFAULT '0', --option spell 2
+  `Ability2b` int(11) unsigned NOT NULL DEFAULT '0', --option spell 2
+  `Ability3a` int(11) unsigned NOT NULL DEFAULT '0', --option spell 3
+  `Ability3b` int(11) unsigned NOT NULL DEFAULT '0', --option spell 3
+  `Level` int(11) unsigned NOT NULL DEFAULT '1',
+  `Health` int(11) unsigned NOT NULL DEFAULT '0',
+  `Attack` int(11) unsigned NOT NULL DEFAULT '0',
+  `Defense` int(11) unsigned NOT NULL DEFAULT '0',
+  `Movement` int(11) unsigned NOT NULL DEFAULT '0',
+  `Item` int(11) unsigned NOT NULL DEFAULT '0',
+  `icon` varchar(100) DEFAULT 'BPet',
+  `WeakVs1` int(11) unsigned NOT NULL DEFAULT '0',
+  `WeakVs2` int(11) unsigned NOT NULL DEFAULT '0',
+  `StrongVs1` int(11) unsigned NOT NULL DEFAULT '0',
+  `StrongVs2` int(11) unsigned NOT NULL DEFAULT '0',
+PRIMARY KEY (`pet_entry`, `level`)
+)
+ENGINE=MyISAM
+DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci
+COMMENT='Stores battle pet levels stats.'
+
+;
+
+-- ----------------------------
+-- Records of battle_pet_levelstats
+-- ----------------------------
+INSERT INTO `battle_pet_levelstats` VALUES (0, 0, 6293, 'HUMANOID', 0, 0, 1, 2, 0, 0, 0, 1, 100, 50, 50, 5, 0, 'BPet', 0, 0, 0, 0);
+INSERT INTO `battle_pet_levelstats` VALUES (1, 1, 6293, 'DRAGON', 0, 3, 4, 5, 0, 0, 0, 1, 100, 50, 50, 5, 0, 'BPet', 0, 0, 0, 0);
+INSERT INTO `battle_pet_levelstats` VALUES (2, 2, 4185, 'FLYING', 0, 6, 7, 8, 0, 0, 0, 1, 100, 50, 50, 5, 0, 'BPet', 0, 0, 0, 0);
+INSERT INTO `battle_pet_levelstats` VALUES (3, 3, 36499, 'UNDEAD', 0, 9, 10, 11, 0, 0, 0, 1, 100, 50, 50, 5, 0, 'BPet', 0, 0, 0, 0);
+INSERT INTO `battle_pet_levelstats` VALUES (4, 4, 27627, 'CRITTER', 0, 12, 13, 14, 0, 0, 0, 1, 100, 50, 50, 5, 0, 'BPet', 0, 0, 0, 0);
+INSERT INTO `battle_pet_levelstats` VALUES (5, 5, 28482, 'MAGICAL', 0, 15, 16, 17, 0, 0, 0, 1, 100, 50, 50, 5, 0, 'BPet', 0, 0, 0, 0);
+INSERT INTO `battle_pet_levelstats` VALUES (6, 6, 28482, 'ELEMENTAL', 0, 18, 19, 20, 0, 0, 0, 1, 100, 50, 50, 5, 0, 'BPet', 0, 0, 0, 0);
+INSERT INTO `battle_pet_levelstats` VALUES (7, 7, 38065, 'BEAST', 0, 21, 22, 23, 0, 0, 0, 1, 100, 50, 50, 5, 0, 'BPet', 0, 0, 0, 0);
+INSERT INTO `battle_pet_levelstats` VALUES (8, 8, 38065, 'AQUATIC', 0, 24, 25, 26, 0, 0, 0, 1, 100, 50, 50, 5, 0, 'BPet', 0, 0, 0, 0);
+INSERT INTO `battle_pet_levelstats` VALUES (9, 9, 38065, 'MECHANICAL', 0, 27, 28, 29, 0, 0, 0, 1, 100, 50, 50, 5, 0, 'BPet', 0, 0, 0, 0);
+
+-- ----------------------------
+-- Table structure for `battle_pet_name_generation`
+-- ----------------------------
+DROP TABLE IF EXISTS `battle_pet_name_generation`;
+CREATE TABLE `battle_pet_name_generation` (
+`id`  mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT ,
+`word`  tinytext CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ,
+`entry`  mediumint(8) UNSIGNED NOT NULL DEFAULT 0 ,
+`half`  tinyint(4) NOT NULL DEFAULT 0 ,
+PRIMARY KEY (`id`)
+)
+ENGINE=MyISAM
+DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci
+AUTO_INCREMENT=314
+
+;
+
+-- ----------------------------
 -- Table structure for `pet_levelstats`
 -- ----------------------------
 DROP TABLE IF EXISTS `pet_levelstats`;
@@ -3384,10 +3450,10 @@ COMMENT='Loot System'
 ;
 
 -- ----------------------------
--- Table structure for `skyfire_string`
+-- Table structure for `mangos_string`
 -- ----------------------------
-DROP TABLE IF EXISTS `skyfire_string`;
-CREATE TABLE `skyfire_string` (
+DROP TABLE IF EXISTS `mangos_string`;
+CREATE TABLE `mangos_string` (
 `entry`  mediumint(8) UNSIGNED NOT NULL DEFAULT 0 ,
 `content_default`  text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ,
 `content_loc1`  text CHARACTER SET utf8 COLLATE utf8_general_ci NULL ,
@@ -3629,6 +3695,22 @@ PRIMARY KEY (`entry`, `item`)
 ENGINE=MyISAM
 DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci
 COMMENT='Loot System'
+
+;
+
+-- ----------------------------
+-- Table structure for `spell_battle_pet_auras`
+-- ----------------------------
+DROP TABLE IF EXISTS `spell_battle_pet_auras`;
+CREATE TABLE `spell_battle_pet_auras` (
+`spell`  mediumint(8) UNSIGNED NOT NULL COMMENT 'dummy spell id' ,
+`effectId`  tinyint(3) UNSIGNED NOT NULL DEFAULT 0 ,
+`battle_pet`  mediumint(8) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'battle_pet id; 0 = all' ,
+`aura`  mediumint(8) UNSIGNED NOT NULL COMMENT 'pet aura id' ,
+PRIMARY KEY (`spell`, `effectId`, `pet`)
+)
+ENGINE=MyISAM
+DEFAULT CHARACTER SET=latin1 COLLATE=latin1_swedish_ci
 
 ;
 
@@ -4104,6 +4186,11 @@ ALTER TABLE `game_tele` AUTO_INCREMENT=1762;
 -- Auto increment value for `gameobject`
 -- ----------------------------
 ALTER TABLE `gameobject` AUTO_INCREMENT=6601898;
+
+-- ----------------------------
+-- Auto increment value for `battle_pet_name_generation`
+-- ----------------------------
+ALTER TABLE `battle_pet_name_generation` AUTO_INCREMENT=314;
 
 -- ----------------------------
 -- Auto increment value for `pet_name_generation`

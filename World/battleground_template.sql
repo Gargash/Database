@@ -11,3 +11,8 @@ INSERT INTO `battleground_template` VALUES (10, 0, 2, 10, 85, 1362, 0, 1363, 0, 
 INSERT INTO `battleground_template` VALUES (11, 5, 5, 10, 85, 1364, 0, 1365, 0, 0, 1, '', 'The Ring of Valor');
 INSERT INTO `battleground_template` VALUES (30, 20, 40, 71, 85, 1485, 0, 1486, 3.16124, 200, 1, '', 'Isle of Conquest');
 INSERT INTO `battleground_template` VALUES (32, 10, 10, 1, 85, 0, 0, 0, 0, 0, 1, '', 'Random battleground');
+-- mop
+INSERT INTO `battleground_template` VALUES ('699', '5', '10', '6060', '0', '6061', '0');
+INSERT INTO `battleground_template` VALUES ('706', '5', '10', '6112', '0', '6112', '0');
+INSERT INTO `battleground_template` VALUES ('708', '5', '10', '6126', '0', '6126', '0');
+INSERT INTO `battleground_template` VALUES ('719', '5', '5', '6219', '0', '6219', '0');

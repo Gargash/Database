@@ -379,6 +379,59 @@ COMMENT='Player System'
 ;
 
 -- ----------------------------
+-- Table structure for `character_battle_pet`
+-- ----------------------------
+DROP TABLE IF EXISTS `character_battle_pet`;
+CREATE TABLE `character_battle_pet` (
+`id`  int(11) UNSIGNED NOT NULL DEFAULT 0 ,
+`entry`  int(11) UNSIGNED NOT NULL DEFAULT 0 ,
+`owner`  int(11) UNSIGNED NOT NULL DEFAULT 0 ,
+`modelid`  int(11) UNSIGNED NULL DEFAULT 0 ,
+`CreatedBySpell`  int(11) UNSIGNED NOT NULL DEFAULT 0 ,
+`PetType`  tinyint(3) UNSIGNED NOT NULL DEFAULT 0 ,
+`level`  int(11) UNSIGNED NOT NULL DEFAULT 1 ,
+`exp`  int(11) UNSIGNED NOT NULL DEFAULT 0 ,
+`Reactstate`  tinyint(1) UNSIGNED NOT NULL DEFAULT 0 ,
+`name`  varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT 'Pet' ,
+`renamed`  tinyint(1) UNSIGNED NOT NULL DEFAULT 0 ,
+`slot`  int(11) UNSIGNED NOT NULL DEFAULT 0 ,
+`curhealth`  int(11) UNSIGNED NOT NULL DEFAULT 1 ,
+`curmana`  int(11) UNSIGNED NOT NULL DEFAULT 0 ,
+`curitem`  int(11) UNSIGNED NOT NULL DEFAULT 0 ,
+`savetime`  bigint(20) UNSIGNED NOT NULL DEFAULT 0 ,
+`resettalents_cost`  int(11) UNSIGNED NOT NULL DEFAULT 0 ,
+`resettalents_time`  bigint(20) UNSIGNED NOT NULL DEFAULT 0 ,
+`abdata`  longtext CHARACTER SET utf8 COLLATE utf8_general_ci NULL ,
+PRIMARY KEY (`id`),
+INDEX `owner` (`owner`) USING BTREE 
+)
+ENGINE=InnoDB
+DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci
+COMMENT='Battle Pet System'
+
+;
+
+-- ----------------------------
+-- Table structure for `character_battle_pet_declinedname`
+-- ----------------------------
+DROP TABLE IF EXISTS `character_battle_pet_declinedname`;
+CREATE TABLE `character_battle_pet_declinedname` (
+`id`  int(11) UNSIGNED NOT NULL DEFAULT 0 ,
+`owner`  int(11) UNSIGNED NOT NULL DEFAULT 0 ,
+`genitive`  varchar(12) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' ,
+`dative`  varchar(12) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' ,
+`accusative`  varchar(12) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' ,
+`instrumental`  varchar(12) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' ,
+`prepositional`  varchar(12) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' ,
+PRIMARY KEY (`id`),
+INDEX `owner_key` (`owner`) USING BTREE 
+)
+ENGINE=InnoDB
+DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci
+
+;
+
+-- ----------------------------
 -- Table structure for `character_pet`
 -- ----------------------------
 DROP TABLE IF EXISTS `character_pet`;
@@ -1222,6 +1275,100 @@ CREATE TABLE `mail_items` (
 `receiver`  int(11) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Character Global Unique Identifier' ,
 PRIMARY KEY (`mail_id`, `item_guid`),
 INDEX `idx_receiver` (`receiver`) USING BTREE 
+)
+ENGINE=InnoDB
+DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci
+
+;
+
+-- ----------------------------
+-- Table structure for `battle_pet_aura`
+-- ----------------------------
+DROP TABLE IF EXISTS `battle_pet_aura`;
+CREATE TABLE `battle_pet_aura` (
+`guid`  int(11) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Global Unique Identifier' ,
+`caster_guid`  bigint(20) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Full Global Unique Identifier' ,
+`item_guid`  int(11) UNSIGNED NOT NULL DEFAULT 0 ,
+`spell`  int(11) UNSIGNED NOT NULL DEFAULT 0 ,
+`stackcount`  int(11) UNSIGNED NOT NULL DEFAULT 1 ,
+`remaincharges`  int(11) UNSIGNED NOT NULL DEFAULT 0 ,
+`basepoints0`  int(11) NOT NULL DEFAULT 0 ,
+`basepoints1`  int(11) NOT NULL DEFAULT 0 ,
+`basepoints2`  int(11) NOT NULL DEFAULT 0 ,
+`periodictime0`  int(11) UNSIGNED NOT NULL DEFAULT 0 ,
+`periodictime1`  int(11) UNSIGNED NOT NULL DEFAULT 0 ,
+`periodictime2`  int(11) UNSIGNED NOT NULL DEFAULT 0 ,
+`maxduration`  int(11) NOT NULL DEFAULT 0 ,
+`remaintime`  int(11) NOT NULL DEFAULT 0 ,
+`effIndexMask`  int(11) UNSIGNED NOT NULL DEFAULT 0 ,
+PRIMARY KEY (`guid`, `caster_guid`, `item_guid`, `spell`)
+)
+ENGINE=InnoDB
+DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci
+COMMENT='Battle Pet System'
+
+;
+
+-- ----------------------------
+-- Table structure for `battle_pet_spell`
+-- ----------------------------
+DROP TABLE IF EXISTS `battle_pet_spell`;
+CREATE TABLE `battle_pet_spell` (
+`guid`  int(11) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Global Unique Identifier' ,
+`spell`  int(11) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Spell Identifier' ,
+`lvlreq` int(11) unsigned NOT NULL DEFAULT '1',
+PRIMARY KEY (`guid`, `spell`)
+)
+ENGINE=InnoDB
+DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci
+COMMENT='Battle Pet System'
+
+;
+
+-- ----------------------------
+-- Records for `battle_pet_spell`
+-- ----------------------------
+
+INSERT INTO `bpet_ability` VALUES (0, 32703, 10); -- regen
+INSERT INTO `bpet_ability` VALUES (1, 32703, 10); -- regen
+INSERT INTO `bpet_ability` VALUES (2, 32703, 10); -- regen
+INSERT INTO `bpet_ability` VALUES (3, 7160, 10); -- execute
+INSERT INTO `bpet_ability` VALUES (4, 7160, 10); -- execute
+INSERT INTO `bpet_ability` VALUES (5, 7160, 10); -- execute
+INSERT INTO `bpet_ability` VALUES (6, 118442, 10); -- swiftness
+INSERT INTO `bpet_ability` VALUES (7, 118442, 10); -- swiftness
+INSERT INTO `bpet_ability` VALUES (8, 118442, 10); -- swiftness
+INSERT INTO `bpet_ability` VALUES (9, 41410, 10); -- damned
+INSERT INTO `bpet_ability` VALUES (10, 41410, 10); -- damned
+INSERT INTO `bpet_ability` VALUES (11, 41410, 10); -- damned
+INSERT INTO `bpet_ability` VALUES (12, 115997, 10); -- elusiveness
+INSERT INTO `bpet_ability` VALUES (13, 115997, 10); -- elusiveness
+INSERT INTO `bpet_ability` VALUES (14, 115997, 10); -- elusiveness
+INSERT INTO `bpet_ability` VALUES (15, 33054, 10); -- spellshield
+INSERT INTO `bpet_ability` VALUES (16, 33054, 10); -- spellshield
+INSERT INTO `bpet_ability` VALUES (17, 33054, 10); -- spellshield
+INSERT INTO `bpet_ability` VALUES (18, 2380, 10); -- wheather resistance
+INSERT INTO `bpet_ability` VALUES (19, 2380, 10); -- wheather resistance
+INSERT INTO `bpet_ability` VALUES (20, 2380, 10); -- wheather resistance
+INSERT INTO `bpet_ability` VALUES (21, 60075, 10); -- enrage
+INSERT INTO `bpet_ability` VALUES (22, 60075, 10); -- enrage
+INSERT INTO `bpet_ability` VALUES (23, 60075, 10); -- enrage
+INSERT INTO `bpet_ability` VALUES (24, 8361, 10); -- purity
+INSERT INTO `bpet_ability` VALUES (25, 8361, 10); -- purity
+INSERT INTO `bpet_ability` VALUES (26, 8361, 10); -- purity
+INSERT INTO `bpet_ability` VALUES (27, 64668, 10); -- failsafe
+INSERT INTO `bpet_ability` VALUES (28, 64668, 10); -- failsafe
+INSERT INTO `bpet_ability` VALUES (29, 64668, 10); -- failsafe
+
+-- ----------------------------
+-- Table structure for `battle_pet_spell_cooldown`
+-- ----------------------------
+DROP TABLE IF EXISTS `battle_pet_spell_cooldown`;
+CREATE TABLE `battle_pet_spell_cooldown` (
+`guid`  int(11) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Global Unique Identifier, Low part' ,
+`spell`  int(11) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Spell Identifier' ,
+`time`  bigint(20) UNSIGNED NOT NULL DEFAULT 0 ,
+PRIMARY KEY (`guid`, `spell`)
 )
 ENGINE=InnoDB
 DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci
